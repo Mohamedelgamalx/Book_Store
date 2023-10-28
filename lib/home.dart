@@ -121,7 +121,9 @@ class _HomeState extends State<Home> {
                                           await BookProvider.instance.deleteBook(book.id!);
                                         }
                                         setState(() {});
+                                        Navigator.pop(context);
                                       },
+
                                       style: ElevatedButton.styleFrom(
                                           elevation: 0,
                                           backgroundColor:

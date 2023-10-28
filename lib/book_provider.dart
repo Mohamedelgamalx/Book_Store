@@ -25,9 +25,10 @@ create table $tableBook (
   $columnId integer primary key autoincrement, 
   $columnTitle text not null,
   $columnAuthor text not null,
-  $columnUrl text not null,)
+  $columnUrl text not null
+  )
 ''');
-        });
+    });
   }
 
   Future<Book> insertBook(Book book) async {
