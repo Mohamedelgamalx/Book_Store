@@ -1,3 +1,4 @@
+import 'package:book_store/book_provider.dart';
 import 'package:book_store/home.dart';
 import 'package:flutter/material.dart';
 import 'book.dart';
@@ -63,7 +64,7 @@ class _BottomSheetCustomWidgetState extends State<BottomSheetCustomWidget> {
             child: ElevatedButton(
                 onPressed: () {
                   setState(() {});
-                  bookList.add(Book(
+                  BookProvider.instance.insertBook(Book(
                       title: widget.titleName.text,
                       author: widget.authorName.text,
                       url: widget.coverName.text));

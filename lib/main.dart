@@ -1,10 +1,13 @@
+import 'package:book_store/book_provider.dart';
 import 'package:book_store/home.dart';
 import 'package:flutter/material.dart';
 import 'book.dart';
 
 List<Book> bookList = [];
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await BookProvider.instance.open();
   runApp(const MyApp());
 }
 

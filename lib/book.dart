@@ -1,3 +1,5 @@
+import 'package:book_store/book_provider.dart';
+
 class Book {
   int? id;
   late String title;
@@ -12,22 +14,22 @@ class Book {
 });
 
   Book.fromMap(Map<String, dynamic> map) {
-    if (map['id'] != null) {
-      this.id = map['id'];
+    if (map[columnId] != null) {
+      id = map[columnId];
     }
-    this.title = map['title'];
-    this.author = map['author'];
-    this.url = map['url'];
+    title = map[columnTitle];
+    author = map[columnAuthor];
+    url = map[columnUrl];
   }
 
   Map<String,dynamic> toMap() {
     Map<String,dynamic> map = {};
-    if (this.id != null) {
-      map['id'] = this.id;
+    if (id != null) {
+      map[columnTitle] = id;
     }
-    map['title'] = this.title;
-    map['author'] = this.author;
-    map['url'] = this.url;
+    map[columnTitle] = title;
+    map[columnAuthor] = author;
+    map[columnUrl] = url;
     return map;
   }
 }
