@@ -2,7 +2,6 @@ import 'package:book_store/book_provider.dart';
 import 'package:book_store/home.dart';
 import 'package:flutter/material.dart';
 import 'book.dart';
-import 'main.dart';
 
 class BottomSheetCustomWidget extends StatefulWidget {
   TextEditingController titleName = TextEditingController();
